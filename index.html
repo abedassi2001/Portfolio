@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulrahman Assi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h1>Abdulrahman Assi</h1>
+                    <p class="title">Computer Science Student</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 0528904953</p>
+                        <p><i class="fas fa-envelope"></i> abedassi134@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Kafr bara 4586300, Israel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-assistant-toggle">
+                <button id="aiToggle" class="ai-toggle-btn">
+                    <i class="fas fa-robot"></i>
+                    <span>Ask AI About My CV</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- AI Chat Section -->
+        <div id="aiChat" class="ai-chat hidden">
+            <div class="chat-header">
+                <h3><i class="fas fa-robot"></i> AI Assistant</h3>
+                <button id="closeChat" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai">
+                    <div class="message-content">
+                        <p>Hello! I'm your AI assistant. I can answer questions about Abdulrahman's CV, experience, skills, and projects. What would you like to know?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Ask me anything about Abdulrahman's background...">
+                <button id="sendMessage" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Section -->
+            <section class="section">
+                <h2><i class="fas fa-user"></i> About</h2>
+                <p>I am an enthusiastic Computer Science student with strong problem-solving skills, attention to detail, and experience in cross-platform coding. Eager to contribute to a team focused on growth and improvement.</p>
+            </section>
+
+            <!-- Education Section -->
+            <section class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="education-item">
+                    <h3>Haifa University</h3>
+                    <p class="degree">Computer Science (BSc)</p>
+                    <p class="duration">March 2022 – Present</p>
+                    <p class="gpa">Current GPA: 83</p>
+                    
+                    <div class="courses">
+                        <h4>Key Course Grades:</h4>
+                        <div class="grades-grid">
+                            <div class="grade-item">
+                                <span class="course">Data Structures</span>
+                                <span class="score">99</span>
+                            </div>
+                            <div class="grade-item">
+                                <span class="course">Machine Learning</span>
+                                <span class="score">90</span>
+                            </div>
+                            <div class="grade-item">
+                                <span class="course">Computer Organization and Architecture</span>
+                                <span class="score">88</span>
+                            </div>
+                            <div class="grade-item">
+                                <span class="course">Advanced Data Structures</span>
+                                <span class="score">85</span>
+                            </div>
+                            <div class="grade-item">
+                                <span class="course">Computer Networks</span>
+                                <span class="score">85</span>
+                            </div>
+                            <div class="grade-item">
+                                <span class="course">Operating Systems</span>
+                                <span class="score">82</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills Section -->
+            <section class="section">
+                <h2><i class="fas fa-code"></i> Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>High Control</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Familiar With</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Assembly</span>
+                            <span class="skill-tag">HTML</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Concepts</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Object-Oriented Programming</span>
+                            <span class="skill-tag">Client-Server Architecture</span>
+                            <span class="skill-tag">Database Design</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Languages Section -->
+            <section class="section">
+                <h2><i class="fas fa-language"></i> Languages</h2>
+                <div class="languages">
+                    <div class="language-item">
+                        <span class="language">Arabic</span>
+                        <span class="proficiency">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language">Hebrew</span>
+                        <span class="proficiency">Full Proficiency</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language">English</span>
+                        <span class="proficiency">Full Proficiency</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="section">
+                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>Cinema Stream</h3>
+                        <p class="project-type">Client-Server Cinema Ticketing and Streaming System</p>
+                        <p class="project-description">Developed a client-server application using JavaFX and OCSF, using a database (SQL) backend for data storage. The system enables users to purchase cinema tickets or stream movies at home, with built-in features for admin management and user support.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">OCSF</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>AI Agent for Chess Game</h3>
+                        <p class="project-type">Autonomous Chess-Playing Agent</p>
+                        <p class="project-description">Developed an autonomous chess-playing agent using Python with a client-server architecture and multithreading for real-time matches against human and AI opponents. Optimized decision making algorithms to achieve high performance under time constraints, enhancing strategic depth and adaptability.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Multithreading</span>
+                            <span class="tech-tag">Client-Server</span>
+                            <span class="tech-tag">AI Algorithms</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Natural Language to SQL (NL2SQL) Engine</h3>
+                        <p class="project-type">Full-Stack NL2SQL Application</p>
+                        <p class="project-description">Developed a comprehensive full-stack Natural Language to SQL application using Node.js and Express.js backend with MongoDB and SQL database integration. Leveraged OpenAI API to translate user queries into validated, executable SQL queries, creating a user-friendly interface for non-technical data exploration and analysis.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">OpenAI API</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section">
+                <h2><i class="fas fa-envelope"></i> Contact & Links</h2>
+                <div class="contact-links">
+                    <a href="mailto:abedassi134@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="tel:0528904953" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone</span>
+                    </a>
+                    <a href="https://github.com/abedassi2001" class="contact-link" id="githubLink" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abedassi/" class="contact-link" id="linkedinLink" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
