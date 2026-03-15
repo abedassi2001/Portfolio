@@ -1,5 +1,4 @@
 // Portfolio AI Assistant
-var counter = 0;
 class PortfolioAI {
     constructor() {
         this.isOpen = false;
@@ -49,7 +48,7 @@ class PortfolioAI {
     getCVData() {
         return {
             name: "Abdulrahman Assi",
-            title: "Computer Science Student",
+            title: "Computer Science BSc Graduate",
             contact: {
                 phone: "0528904953",
                 email: "abedassi134@gmail.com",
@@ -58,54 +57,50 @@ class PortfolioAI {
             education: {
                 university: "Haifa University",
                 degree: "Computer Science (BSc)",
-                duration: "March 2022 – Present",
-                gpa: 83,
+                duration: "Graduated",
+                gpa: 85,
                 courses: {
                     "Data Structures": 99,
                     "Machine Learning": 90,
+                    "Deep Learning": 90,
                     "Computer Organization and Architecture": 88,
-                    "Advanced Data Structures": 85,
                     "Computer Networks": 85,
                     "Operating Systems": 82
                 }
             },
             skills: {
-                highControl: ["C", "C++", "Java", "Python", "JavaScript", "HTML", "Node.js"],
-                familiar: ["Assembly", "HTML"],
+                programmingLanguages: ["C", "C++", "Java", "Python", "JavaScript", "Dart"],
+                frameworksAndTools: ["Node.js", "Flutter", "Git", "Jira"],
+                webAndSystems: ["REST APIs", "HTML", "Linux", "Spring Boot", "React"],
+                testingAndDevOps: ["Unit Testing", "Docker"],
                 concepts: ["Object-Oriented Programming", "Client-Server Architecture", "Database Design", "Machine Learning"]
             },
             languages: {
                 "Arabic": "Native",
-                "Hebrew": "Full Proficiency",
-                "English": "Full Proficiency"
+                "Hebrew": "Full Proficiency (high level)",
+                "English": "Full Proficiency (high level)"
             },
             projects: [
                 {
-                    name: "Cinema Stream",
-                    type: "Client-Server Cinema Ticketing and Streaming System",
-                    description: "Developed a client-server application using JavaFX and OCSF, using a database (SQL) backend for data storage. The system enables users to purchase cinema tickets or stream movies at home, with built-in features for admin management and user support.",
-                    technologies: ["Java", "JavaFX", "SQL", "OCSF"]
-                },
-                {
                     name: "AI Agent for Chess Game",
                     type: "Autonomous Chess-Playing Agent",
-                    description: "Developed an autonomous chess-playing agent using Python with a client-server architecture and multithreading for real-time matches against human and AI opponents. Optimized decision making algorithms to achieve high performance under time constraints, enhancing strategic depth and adaptability.",
+                    description: "Developed an autonomous chess-playing agent in Python using a client-server architecture and multithreading. Implemented time-constrained decision-making algorithms to optimize move selection in real-time games.",
                     technologies: ["Python", "Multithreading", "Client-Server", "AI Algorithms"]
+                },
+                {
+                    name: "AI Calendar Assistant",
+                    type: "Flutter Mobile App with Fast API Backend",
+                    description: "A Flutter mobile app with a Fast API backend that uses AI to create and manage calendar events from natural language. Includes event CRUD operations, PostgreSQL database integration, and an AI assistant for smart scheduling.",
+                    technologies: ["Flutter", "Fast API", "PostgreSQL", "AI"]
                 },
                 {
                     name: "Natural Language to SQL (NL2SQL) Engine",
                     type: "Full-Stack NL2SQL Application",
                     description: "Developed a comprehensive full-stack Natural Language to SQL application using Node.js and Express.js backend with MongoDB and SQL database integration. Leveraged OpenAI API to translate user queries into validated, executable SQL queries, creating a user-friendly interface for non-technical data exploration and analysis.",
                     technologies: ["Node.js", "Express.js", "MongoDB", "SQL", "OpenAI API"]
-                },
-                {
-                    name: "Phishing Website Detection System",
-                    type: "Machine Learning Cybersecurity Project",
-                    description: "Developed a comprehensive machine learning system to detect phishing websites using a Random Forest classifier. Achieved 96.9% accuracy by analyzing 30+ binary features including URL structure, HTTPS usage, and domain characteristics. Performed extensive EDA including outlier detection, clustering analysis, and feature correlation studies on 11,054 website samples.",
-                    technologies: ["Python", "Machine Learning", "Random Forest", "Pandas", "Scikit-learn", "Data Analysis"]
                 }
             ],
-            about: "I am an enthusiastic Computer Science student with strong problem-solving skills, attention to detail, and experience in cross-platform coding. Eager to contribute to a team focused on growth and improvement."
+            about: "Computer Science BSc graduate with strong foundations in data structures, machine learning, and systems programming. Hands-on experience building AI-driven and full-stack applications using Python, Node.js, Flutter, and Fast API."
         };
     }
 
@@ -203,24 +198,21 @@ class PortfolioAI {
 
     generateAIResponse(userMessage) {
         const message = userMessage.toLowerCase();
-        console.log("gegegegegegegegegegegegegeg");
-        console.log(counter);
-        counter++;
         // Simple keyword-based responses (in a real implementation, this would use OpenAI API)
         if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
             return "Hello! I'm here to help you learn about Abdulrahman's background, skills, and experience. What would you like to know?";
         }
         
         if (message.includes('education') || message.includes('university') || message.includes('gpa')) {
-            return `Abdulrahman is currently studying Computer Science (BSc) at Haifa University (March 2022 – Present) with a current GPA of 83. His strongest subjects include Data Structures (99), Machine Learning (90), and Computer Organization and Architecture (88). He also has excellent grades in Advanced Data Structures (85), Computer Networks (85), and Operating Systems (82).`;
+            return `Abdulrahman is a Computer Science (BSc) graduate from Haifa University with a GPA of 85. His strongest subjects include Data Structures (99), Machine Learning (90), Deep Learning (90), and Computer Organization and Architecture (88). He also has excellent grades in Computer Networks (85) and Operating Systems (82).`;
         }
         
         if (message.includes('skill') || message.includes('programming') || message.includes('language')) {
-            return `Abdulrahman has high proficiency in C, C++, Java, Python, JavaScript, HTML, and Node.js. He's also familiar with Assembly and HTML. His expertise includes Object-Oriented Programming, Client-Server Architecture, Database Design, and Machine Learning concepts.`;
+            return `Abdulrahman's technical skills include: Programming languages—C, C++, Java, Python, JavaScript, Dart; Frameworks & tools—Node.js, Flutter, Git, Jira; Web & systems—REST APIs, HTML, Linux, Spring Boot, React; Testing & DevOps—Unit Testing, Docker. He has strong experience in Object-Oriented Programming and building scalable systems.`;
         }
         
         if (message.includes('project') || message.includes('work') || message.includes('experience')) {
-            return `Abdulrahman has worked on several impressive projects: 1) Cinema Stream - A Java-based client-server ticketing system with SQL backend, 2) AI Chess Agent - A Python-based autonomous chess player with multithreading, and 3) NL2SQL Engine - A full-stack application using Node.js, Express.js, MongoDB, and OpenAI API for natural language to SQL translation.`;
+            return `Abdulrahman has worked on several impressive projects: 1) AI Agent for Chess Game—A Python autonomous chess-playing agent with client-server architecture and multithreading; 2) AI Calendar Assistant—A Flutter mobile app with Fast API backend and PostgreSQL for AI-powered calendar management from natural language; 3) NL2SQL Engine—A full-stack application using Node.js, Express.js, MongoDB, and OpenAI API for natural language to SQL translation.`;
         }
         
         if (message.includes('contact') || message.includes('email') || message.includes('phone')) {
@@ -232,23 +224,23 @@ class PortfolioAI {
         }
         
         if (message.includes('about') || message.includes('who') || message.includes('background')) {
-            return `Abdulrahman is an enthusiastic Computer Science student with strong problem-solving skills and attention to detail. He has experience in cross-platform coding and is eager to contribute to teams focused on growth and improvement. He's currently pursuing his BSc in Computer Science at Haifa University.`;
+            return `Abdulrahman is a Computer Science BSc graduate with strong foundations in data structures, machine learning, and systems programming. He has hands-on experience building AI-driven and full-stack applications using Python, Node.js, Flutter, and Fast API. He is eager to contribute to teams focused on growth and improvement.`;
         }
         
         if (message.includes('experience') || message.includes('work') || message.includes('job')) {
-            return `While Abdulrahman is currently a student, he has gained significant practical experience through his projects. His work includes developing complex client-server applications, AI systems, and full-stack web applications. He's demonstrated strong technical skills and problem-solving abilities through these projects.`;
+            return `Abdulrahman has gained significant practical experience through his projects as a Computer Science graduate. His work includes developing autonomous AI agents (chess), Flutter mobile apps with Fast API backends, and full-stack NL2SQL applications. He has demonstrated strong technical skills in Python, Node.js, Flutter, and AI/ML.`;
         }
         
         if (message.includes('strength') || message.includes('strong') || message.includes('best')) {
-            return `Abdulrahman's key strengths include: Strong academic performance (especially in Data Structures with 99), diverse programming skills across multiple languages, experience with AI and machine learning, client-server architecture knowledge, and multilingual abilities. His attention to detail and problem-solving skills make him a valuable team member.`;
+            return `Abdulrahman's key strengths include: Strong academic performance (GPA 85, Data Structures 99, Machine Learning and Deep Learning 90), diverse programming skills (C, C++, Java, Python, JavaScript, Dart), experience with Flutter, Fast API, Node.js, and AI/ML, plus multilingual abilities (Arabic, Hebrew, English).`;
         }
         
         if (message.includes('future') || message.includes('goal') || message.includes('plan')) {
-            return `As a Computer Science student, Abdulrahman is focused on completing his degree while building practical experience through projects. His diverse skill set in programming, AI, and full-stack development positions him well for various career opportunities in software development, AI/ML, or system architecture.`;
+            return `As a Computer Science BSc graduate, Abdulrahman's diverse skill set in programming, AI, Flutter, and full-stack development positions him well for career opportunities in software development, AI/ML, or mobile and web application development.`;
         }
         
         // Default response for unrecognized queries
-        return `I can help you learn about Abdulrahman's education, technical skills, projects, languages, or contact information. Could you be more specific about what you'd like to know? For example, you could ask about his university studies, programming skills, or specific projects.`;
+        return `I can help you learn about Abdulrahman's education (GPA 85), technical skills, projects (Chess AI, AI Calendar Assistant, NL2SQL), languages, or contact information. Could you be more specific about what you'd like to know?`;
     }
 
     // Method to integrate with OpenAI API (requires API key)
